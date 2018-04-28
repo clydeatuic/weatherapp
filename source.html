@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Weather Demo</title>
+</head>
+<body>
+
+<div id="app"></div>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script type="text/javascript">
+
+	const SEARCH_URL = 'https://api.openweathermap.org/data/2.5/weather';
+	axios.get(SEARCH_URL, {
+		params: {
+			q: 'Davao',
+			units: 'metric',
+			appid: '299dafbd93e95452304f176a39de2b2e'
+		}
+	})
+	.then(function (response) {
+		$('#app').html(`
+			${response.data.name}
+		`);
+		console.log(response);
+	})
+	.catch(function (error) {
+		console.log(error);
+	});
+
+</script>
+
+</body>
+</html>
