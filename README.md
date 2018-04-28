@@ -10,7 +10,14 @@ $ git clone github-repo
 $ cd github-repo
 ```
 
-2. Modify Codes
+2. Branch
+
+```
+$ git checkout -b branch-name-here
+
+```
+
+3. Modify Code
 
 ```
 $ git status
@@ -19,17 +26,17 @@ $ git config user.email "email-address-here"
 
 ```
 
-3. Pull
+4. Pull
 
 ```
 $ git pull
 
 ```
 
-4. Push
+5. Push
 
 ```
 $ git add .
 $ git commit -m "commit msg here"
-$ git push
+$ git push -u origin branch-name-here
 ```

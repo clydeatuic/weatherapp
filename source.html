@@ -22,8 +22,10 @@
 	})
 	.then(function (response) {
 		$('#app').html(`
-			<h1>${response.data.name}</h1>
-			${response.data.main.temp} degree celsius
+			<center>
+				<h1>${response.data.name}</h1>
+				${response.data.main.temp} degree celsius
+			</center>
 		`);
 		console.log(response);
 	})
